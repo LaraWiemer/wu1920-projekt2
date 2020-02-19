@@ -1,7 +1,89 @@
+body{
+    background-color: rgb(255, 252, 246);
+}
+
 .book_covers{
-    display:inline;
+    display:inline-block;
     height: auto;
     width: 10vw;
 }
 
+header{
+    text-align: center;
+    color: darkred;
+}
 
+nav{
+    display: grid;
+    grid-template-columns: 60px 1fr 2fr 1fr 2fr;
+    grid-template-rows: 3fr 1fr;
+}
+
+nav img{
+    grid-column: 1;
+    width: 60px;
+    height: auto;
+    
+}
+
+nav h2{
+    grid-column: 2;
+    width: 50%;
+    height:auto;
+    color: darkred;
+}
+
+nav p{
+    grid-column: 4;
+    grid-row: 1;
+    float: right;
+    text-align: right;
+}
+
+.stor{
+    display: grid;
+    grid-template-columns: 3 fr 1 fr;
+    grid-template-rows: 100%;
+}
+
+section{
+    color: darkred;
+}
+
+.bokkategorier1{
+    grid-column: 1;
+    grid-row: 1;
+    color: darkred;
+}
+
+.bokkategorier2{
+    grid-column: 1;
+    grid-row: 2;
+    color: darkred;
+}
+
+aside{
+    grid-column: 2;
+    grid-row: 1;
+    display:block;
+}
+
+aside p a{
+    color:darkred;
+    text-decoration: none;
+    font-size: 20px;
+
+}
+
+
+.liten{
+    display:grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 100%;
+}
+
+footer{
+    background-color:rgb(158, 158, 158);
+    grid-column: 5;
+    height: 20%;
+}
