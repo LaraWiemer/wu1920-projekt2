@@ -31,6 +31,7 @@ nav h2{
     width: 50%;
     height:auto;
     color: darkred;
+    text-align: right;
 }
 
 nav p{
@@ -75,6 +76,11 @@ aside p a{
 
 }
 
+aside p a:hover{
+    color: darkslategray;
+    text-decoration: underline;
+}
+
 
 .liten{
     display:grid;
@@ -87,3 +93,4 @@ footer{
     grid-column: 5;
     height: 20%;
 }
+
