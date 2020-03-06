@@ -15,8 +15,9 @@ header{
 
 nav{
     display: grid;
-    grid-template-columns: 60px 1fr 2fr 1fr 2fr;
+    grid-template-columns: 60px 1fr 2fr 2fr;
     grid-template-rows: 3fr 1fr;
+    margin-right: 8%;
 }
 
 nav img{
@@ -32,6 +33,17 @@ nav h2{
     height:auto;
     color: darkred;
     text-align: right;
+    font-size: 26px;
+}
+
+nav a{
+    grid-column: 4;
+    grid-row: 1;
+    float: right;
+    text-align: right;
+    color: darkred;
+    text-decoration: none;
+    font-size: 20px;
 }
 
 nav p{
@@ -39,6 +51,14 @@ nav p{
     grid-row: 1;
     float: right;
     text-align: right;
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+nav a:hover{
+    text-decoration: underline;
+    color: darkslategray;
 }
 
 .stor{
@@ -49,14 +69,14 @@ nav p{
 
 section{
     color: darkred;
-    display:grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 3fr 3fr;
-    margin-top: 15px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 section h3{
-    grid-row: 1;
+    width: 100%
 }
 
 section a{
@@ -80,13 +100,13 @@ aside{
     grid-column: 2;
     grid-row: 1;
     display:block;
+    margin-left: 25%;
 }
 
 aside p a{
     color:darkred;
     text-decoration: none;
     font-size: 20px;
-
 }
 
 aside p a:hover{
@@ -112,5 +132,44 @@ footer{
     height: auto;
 }
 
+@media screen and (max-width: 480px) {
+    .stor{
+        display: block;
+    }
 
+    aside p a{
+        color:darkred;
+        text-decoration: underline;
+        font-size: 14px;
+    
+    }
+
+    aside{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-left: unset;
+    }
+
+
+    nav p{
+        font-size: 12px;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    .book_covers{
+        display:inline-block;
+        height: auto;
+        width: 31vw;
+    }
+
+    .scroll_button{
+        display: none;
+    }
+
+    aside{
+        margin-top: 5%;
+    }
+}
 
