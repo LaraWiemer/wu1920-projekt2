@@ -11,19 +11,23 @@ body{
 header{
     text-align: center;
     color: darkred;
+    font-size: 24px;
 }
 
 nav{
     display: grid;
     grid-template-columns: 60px 3fr 2fr;
-    grid-template-rows: 3fr 1fr;
+    grid-template-rows: 4fr 1fr;
     margin-right: 8%;
+    font-size: 22px;
 }
 
 .icon{
     grid-column: 1;
-    width: 60px;
-    height: auto;
+    width: auto;
+    height: 60px;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .icon img{
@@ -36,9 +40,24 @@ nav{
 }
   
 .topnav #myLinks {
-    
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
 }
-  
+
+.lista{
+    color: darkred;
+    text-decoration: none;
+    margin-left: 3%;
+    margin-right: 3%;
+    font-size: 24px;
+}
+
+.lista:hover{
+    text-decoration: underline;
+    color: darkslategray;
+}
+
 
 nav h2{
     grid-column: 2;
@@ -46,7 +65,6 @@ nav h2{
     height:auto;
     color: darkred;
     text-align: right;
-    font-size: 26px;
     text-align: left;
     margin-left: 2%;
 }
@@ -58,7 +76,6 @@ nav a{
     text-align: right;
     color: darkred;
     text-decoration: none;
-    font-size: 20px;
 }
 
 nav p{
@@ -210,6 +227,114 @@ form div a:hover{
     background-color: rgb(201, 201, 201);
 }
 
+.book_cover_info{
+    display: block;
+    width: auto;
+    height: 230px;
+    grid-column: 1;
+}
+
+.book_coversection{
+    background-color: white;
+    width: 100%;
+    height: 200px;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+}
+
+.title{
+    color: darkred;
+    grid-column: 2;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 28px;
+}
+
+.reportIconContainer{
+    height: 60px;
+    width: 60px;
+    margin-bottom: 120px;
+    margin-left: 76%;
+}
+
+.reportIcon{
+    height: 60px;
+    width: auto;
+}
+
+.book_info{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    margin-top: 4%;
+}
+
+.book_description{
+    grid-column: 1;
+    font-size: 22px;
+}
+
+.kapitelöversikt{
+    grid-column: 2;
+    margin-left: 20%;
+}
+
+.button_read{
+    grid-column: 2; 
+    display: block;
+    height: 90px;
+    width: 135px;   
+    float: right;
+    margin-bottom: 100px;
+    color: darkred;
+    font-size: 24px;
+    margin-right: 10%;
+}
+
+.button_read:hover{
+    background-color: rgb(201, 201, 201);
+}
+
+.kursivt{
+    font-style: italic;
+    color: darkred;
+}
+
+.text{
+    font-size: 22px;
+}
+
+.rubrik{
+    font-size: 28px;
+    margin-left: 10%;
+}
+
+.black_text{
+    color: black;
+    font-size: 22px;
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+.button_next{
+    float:right;
+    height: 60px;
+    width: 100px; 
+    color: darkred;
+}
+
+.button_next:hover{
+    background-color: rgb(201, 201, 201);
+}
+
+.footer_read{
+    margin-top: 8%;
+}
+
+
 @media screen and (max-width: 480px) {
     .stor{
         display: block;
@@ -218,7 +343,7 @@ form div a:hover{
     aside p a{
         color:darkred;
         text-decoration: underline;
-        font-size: 14px;
+        font-size: 16px;
     
     }
 
@@ -227,13 +352,18 @@ form div a:hover{
         flex-wrap: wrap;
         justify-content: space-between;
         margin-left: unset;
+        margin-top: 5%;
     }
 
 
-    nav p{
-        font-size: 12px;
+    nav p a{
+        font-size: 16px;
         margin-top: auto;
         margin-bottom: auto;
+    }
+
+    nav h2{
+        font-size: 20px;
     }
 
     .book_covers{
@@ -246,19 +376,97 @@ form div a:hover{
         display: none;
     }
 
-    aside{
-        margin-top: 5%;
-    }
-
     form{
         width: 100%;
-        margin-left: 2%;
-        margin-right: 2%;
+        margin-left: none;
+        margin-right: none;
     }
 
     .LoggaIn{
         margin-left: unset;
     }
 
-}
+    .book_info{
+        display: block;
+        margin-top: 25%;
+    }
 
+    .book_coversection{
+        grid-template-columns: 1fr 1fr;
+        height: 200px;    }
+
+    .book_cover_info{
+        grid-column: 1;
+        height: 200px;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    .title{
+        width: 150px;
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .reportIcon{
+        display: none;
+
+    }
+
+    .reportIconContainer{
+        display: none;
+    }
+
+    .book_info{
+        display: grid;
+        grid-template-rows: 50px auto;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .button_read{
+        grid-row: 1;
+        height: 60px;
+        width: 90px;
+        float: left;
+        grid-column: 1;
+    }
+
+    .kapitelöversikt{
+        grid-row: 1;
+        width: 80%;
+        float: right;
+        grid-column: 2;
+    }
+
+    .book_description{
+        grid-row: 2;
+        width: 100%;
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    .text{
+        font-size: 16px;
+    }
+
+    .black_text{
+        font-size: 16px;
+    }
+
+    .lista{
+        font-size: 18px;
+    }
+
+    .button_next{
+        height: 40px;
+        width: 80px; 
+    }
+
+    .footer_read{
+        margin-top: 80px;
+    }
+
+    .rubrik{
+        font-size: 18px;
+    }
+}
