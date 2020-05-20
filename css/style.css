@@ -11,45 +11,28 @@ body{
 header{
     text-align: center;
     color: darkred;
-    font-size: 24px;
+    font-size: 30px;
+}
+
+header a{
+    color: darkred;
+    text-decoration: none;
 }
 
 nav{
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
     grid-template-columns: 60px 3fr 2fr;
     grid-template-rows: 4fr 1fr;
     margin-right: 8%;
-    font-size: 22px;
-}
-
-.icon{
-    grid-column: 1;
-    width: auto;
-    height: 60px;
-    margin-top: auto;
-    margin-bottom: auto;
-}
-
-.icon img{
-    width: 100%;
-    height: auto;
-}
-
-.topnav {
-    display: none;
-}
-  
-.topnav #myLinks {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
+    font-size: 24px;
+    margin-bottom: 1%;
 }
 
 .lista{
     color: darkred;
     text-decoration: none;
-    margin-left: 3%;
-    margin-right: 3%;
+    margin-right: 8%;
     font-size: 24px;
 }
 
@@ -58,34 +41,21 @@ nav{
     color: darkslategray;
 }
 
+.current{
+    color: darkred;
+    text-decoration: underline;
+    margin-right: 8%;
+    font-size: 24px;
+}
+
+.current:hover{
+    color: darkred;
+}
 
 nav h2{
-    grid-column: 2;
-    width: 50%;
-    height:auto;
     color: darkred;
     text-align: right;
     text-align: left;
-    margin-left: 2%;
-}
-
-nav a{
-    grid-column: 3;
-    grid-row: 1;
-    float: right;
-    text-align: right;
-    color: darkred;
-    text-decoration: none;
-}
-
-nav p{
-    grid-column: 3;
-    grid-row: 1;
-    float: right;
-    text-align: right;
-    color: black;
-    text-decoration: none;
-    font-size: 20px;
 }
 
 nav a:hover{
@@ -97,7 +67,7 @@ nav a:hover{
 
 .stor{
     display: grid;
-    grid-template-columns: 4 fr 1 fr;
+    grid-template-columns: 4fr 1fr;
     grid-template-rows: 100%;
 }
 
@@ -283,15 +253,32 @@ form div a:hover{
 }
 
 .button_read{
-    grid-column: 2; 
+    grid-column: 2;
     display: block;
     height: 90px;
-    width: 135px;   
+    width: 135px;
     float: right;
     margin-bottom: 100px;
     color: darkred;
-    font-size: 24px;
     margin-right: 10%;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    text-align: center;
+    align-items: flex-start;
+    cursor: default;
+    box-sizing: border-box;
+    margin: 0em;
+    font: 400 13.3333px Arial;
+    padding: 25px 6px;
+    border-width: 2px;
+    border-style: outset;
+    border-color: buttonface;
+    border-image: initial;
+    text-decoration: none;
+    font-size: xx-large;
 }
 
 .button_read:hover{
@@ -355,11 +342,8 @@ form div a:hover{
         margin-top: 5%;
     }
 
-
-    nav p a{
+    nav{
         font-size: 16px;
-        margin-top: auto;
-        margin-bottom: auto;
     }
 
     nav h2{
@@ -429,6 +413,8 @@ form div a:hover{
         width: 90px;
         float: left;
         grid-column: 1;
+        font-size: x-large;
+        padding: 15px 6px;
     }
 
     .kapitelöversikt{
@@ -454,7 +440,8 @@ form div a:hover{
     }
 
     .lista{
-        font-size: 18px;
+        font-size: 1.5em;
+        margin-left: 0%;
     }
 
     .button_next{
